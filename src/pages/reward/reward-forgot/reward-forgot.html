@@ -1,0 +1,44 @@
+
+<ion-header>
+    <ion-navbar>
+        <menu-back></menu-back>
+        <ion-title>
+            <logo></logo>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="page-content"
+    [style.background-color]="this.css['BackColor']">
+    <div class="rp_login_register_logo_row">
+        <div class="rp_login_logo_row">
+            <img class="rp_login_logo"
+                [src]="this.css['Logo_Image']"
+                [style.width] = "'156px'"
+                [style.height] = "'156px'"
+                [style.object-fit] = "'fill'">
+        </div>
+
+        <div class="rp_reset_pass_title"
+            [style.font-size]='this.css["ResetPwd"]["Font_Size"]+"px"'
+            [style.color]='this.css["ResetPwd"]["Color"]'
+            [style.font-family]='this.css["ResetPwd"]["Font"]'>{{this.css["ResetPwd"]["Text"]}}</div>
+        
+        <form #form="ngForm" (ngSubmit)="onSubmit()" novalidate>
+            <ion-input id="user_login" type="email" name="email" [(ngModel)]="data.email" required placeholder="Email" [style.background-color]="'#ffffff'"
+                autocorrect="off" autocapitalize="off"></ion-input>
+        
+            <div
+                [style.padding-top]="'8px'"
+                [style.padding-bottom]="'0px'">
+                <button ion-button class="login-sign-button" block type="submit"
+                    [style.background-color] = "this.css['LoginButton']['Background_Color']">RESET PASSWORD</button>
+            </div>
+
+            <div>
+                <button ion-button class="wp-new-account" block type="button" (click)="onBack()"
+                    [style.background-color] = "this.css['NewAccButton']['Background_Color']">BACK TO LOGIN</button>
+            </div>
+        </form>
+    </div>
+</ion-content>

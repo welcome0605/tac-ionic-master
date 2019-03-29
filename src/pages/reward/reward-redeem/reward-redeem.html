@@ -1,0 +1,48 @@
+
+<ion-header>
+    <ion-navbar>
+        <menu-back></menu-back>
+        <ion-title>
+            <logo></logo>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="page-content">
+    <div class="rewards_program_redeem_input"
+        style = "min-height: calc(100% - 50px)"
+        [style.display] = "'block'">
+        <div class="rp_step_checkin_top">
+            <div class="rp_message_top"
+                [style.font-family] = "this.css['CashierLabel']['Font']"
+                [style.font-size] = "this.css['CashierLabel']['Font_Size']+'px'"
+                [style.color] = "this.css['CashierLabel']['Color']">{{this.css["CashierLabel"]["Text"]}}</div>
+        </div>
+        <form #form="ngForm" novalidate>    
+            <div class="rp_step_checkin_second">
+                <input placeholder="PASSCODE" class="cashier_passcode" type="password" name="passcode"  [(ngModel)]="data.passcode">
+            </div>
+            <div class="rp_step_checkin_third">
+                <div class="rp_bt_default" (click)="onBack()"
+                    [style.background-color] = "this.css['BackButton']['Background_Color']"
+                    [style.font-family] = "this.css['BackButton']['Font']"
+                    [style.font-size] = "this.css['BackButton']['Font_Size']+'px'"
+                    [style.color] = "this.css['BackButton']['Color']">{{this.css["BackButton"]["Text"]}}</div>
+                <div class="cashier_add_points" (click)="onRedeem()"
+                    [style.background-color] = "this.css['RedeemButton']['Background_Color']"
+                    [style.font-family] = "this.css['RedeemButton']['Font']"
+                    [style.font-size] = "this.css['RedeemButton']['Font_Size']+'px'"
+                    [style.color] = "this.css['RedeemButton']['Color']">{{this.css["RedeemButton"]["Text"]}}</div>
+            </div>
+    </form>
+        <div class="rp_step_checkin_fourth">
+            <p
+                [style.font-size] = "this.css['Total_Remaining_Balance']['Font_size'] + 'px'"
+                [style.color]="this.css['Total_Remaining_Balance']['Color']"
+                [style.font-family]="this.css['Total_Remaining_Balance']['Font']">Total Stamps: {{this.totalPoints}}<br>Remaining Stamps After Redemption: {{this.totalPoints-this.redeemCount}}</p>
+        </div>
+    </div>
+
+    <setting-bar style = "display:block" (logoutClicked)="onLogout()" (historyClicked)="onHistory()"></setting-bar>
+    
+</ion-content>

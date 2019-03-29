@@ -1,0 +1,180 @@
+For Kenburns CSS
+
+
+- kenburnListBanner
+
+	- margin = 0px 			(always)
+	- width = calc(100%) 	(always)
+	- border = 2px solid #ffffff
+	- padding = 1px 4px 1px 4px
+	- radius = 0px
+	- background = #ffffff
+
+- kenburnListTitle
+
+	- bottom = 0px 			(always)
+	- color = #ffffff
+	- height = 23px
+	- left (remove) 
+	- right (remove)
+	- size = 24px
+	- alignment = right
+	- backgroundColor = rgba(2,2,2,0.41)
+	- display = block		(always)
+	- fontName = bebas_neueregular
+	- lineHeight = 20px		(always)
+
+- kenburnAnimation
+
+	- name = zoom
+	- duration = 6s
+	- from = 1.3
+	- to = 1
+
+- kenburnIcon
+
+	- fontSize = 24px
+	- verticalAlign = middle
+	- margin = 0px 5px 0px 0px
+
+
+==================================================
+
+
+For subMenu CSS
+
+
+- labelCss
+
+	- paddingLeft = 5px 5px 5px 5px
+	- borderBottom = 1px solid #000000
+	- fontName = bebas_neueregular
+	- size = 14px
+	- color = #000000
+
+==================================================
+
+For textList CSS
+
+
+- labelCss
+
+	- paddingLeft = 0px 0px 0px 15px
+	- borderBottom = 1px solid #000000
+	- fontName = bebas_neueregular
+	- size = 18px
+	- color = #000000
+
+
+================================================
+
+
+For video CSS
+
+
+- contentCss
+
+	- color = #000000
+	- paddingLeft = 0px 0px 0px 10px
+
+
+- videoListCss
+
+	- margin = 3px 0px 0px 16px
+	- paddingLeft = 0px 0px 0px 10px
+	- borderBottom = 2px solid #000000
+
+
+- textCss
+
+	- marginTop = 10px 0px 0px 0px
+
+
+- arrowCss
+
+	- marginTop = 12px 0px 0px 0px
+	- fontSize = 28px
+	- left = 20px
+
+
+================================================
+
+
+For notification CSS
+
+-labelCss
+
+	- color = #000000
+	- fontName = bebas_neueregular
+	- size = 18px
+	- paddingLeft = 0px 0px 0px 15px
+
+- itemInner
+
+	- borderBottom = 1px solid #000000
+
+
+==============================================
+
+
+
+- sideMenuCss
+
+	- mainMenu
+
+		- fontSize = 22px 
+		- fontName = bebas_neueregular
+		- paddingLeft = 15px 
+		- paddingTop = 0px
+		- lineDividerHeight = 2px 
+		- borderBottom = 2px solid #ffffff
+		- lineDividerColor = #000000
+		- selectedColor = #c9c9c9
+		- selectedFontColor = #000000
+		- nonSelectedColor = #ffffff
+		- nonSelectedFontColor = #000000
+		- backgroundColor = #ffffff
+
+	- subMenu
+
+		- fontSize = 20px 
+		- color = #000000
+		- fontName = bebas_neueregular
+		- paddingLeft = 15px
+		- backgroundColor = #ffffff
+		- borderBottom = 2px solid #000000
+		- marginTop = 10px (always)
+
+	- arrow
+
+		- right = 10px 	(always)
+		- position = absolute (always)
+		- fontSize = 30px
+		- arrowColor = #000000
+
+	- backArrow
+
+		- color = #000000
+
+- menuIconCss
+
+	- color = #000000
+
+
+- headerCss
+
+	- color = #ffffff
+	- height = 70px 
+	- borderBottom = 2px solid #000000
+
+- statusBarCss
+
+	- color = #000000
+
+- toggleIcon
+
+	- iconBackgroundColor = #000000
+	- innerBackgroundColor = #ffffff
+
+
+

@@ -1,0 +1,72 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"
+            [style.color]="menuIcon.color"
+            >
+            </ion-icon>
+        </button>
+        <div class="logo_view">
+            <logo></logo>
+        </div>
+    </ion-navbar>
+</ion-header>
+
+<ion-content scroll="false" class="bg_view" no-bounce>
+    <div class="card_view">  
+        <ion-grid style = "margin-bottom: 40px">    
+            <ion-row >
+                <ion-col col-6>
+                    <ion-card class="gallery_bg" (tap)="openGallery()">    
+                        <ion-card-content>                
+                            <img src="./assets/image/Icon_Gallery.png">
+                            <p>Gallery</p>                               
+                        </ion-card-content>
+                    </ion-card>
+                </ion-col>
+                <ion-col col-6>
+                    <ion-card class="camera_bg" (tap)="openCamera()">    
+                        <ion-card-content>                
+                            <img src="./assets/image/Icon_Camera.png">
+                            <p>Camera</p>                
+                        </ion-card-content>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+
+<!--
+<canvas id="cs" [hidden]="'true'"></canvas>
+<div [style.height]="canvasHeight" [style.width]="canvasWidth" [style.background-color]="hexColor" style="position: fixed;
+right: -2px;
+top: 71px;
+border: 2px white solid">
+</div> -->
+
+<!-- <div class="result">
+<span>HEX: #22142b</span>
+<span>RGB: rgb(34,20,43)</span> 
+</div> -->
+<br>
+
+<!-- <div>
+<ion-grid>
+<ion-row>
+<ion-col>
+<button ion-button round block default (click)="openCamera()">Camera</button>
+</ion-col>
+<ion-col>
+<button ion-button round block dark (click)="openGallery()">Gallary</button>
+</ion-col>
+</ion-row>
+</ion-grid>
+</div> -->
+<!--  <div [style.background-color]="hexColor" style="height: 40px; width:40px;"></div>
+<div *ngFor="let item of similarProduct">
+<img src="{{imgUrl}}{{item?.image}}"/>
+{{item.productName}}
+<div [style.background-color]="item.hexvalue" style="height: 40px; width:40px;"></div>
+<hr>
+</div> -->
+</ion-content>

@@ -1,0 +1,178 @@
+page-reward-checkin {
+
+.rewards_program, .rewards_program_home, .rewards_program_stamp_input {
+	margin: 0 auto;
+	max-width: 590px;
+	padding: 10px;
+}
+
+.rp_button_checkin {
+	margin-left: 10px;
+	margin-right: 10%;
+	cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 20px 10px;
+	width: 45%;
+	
+	font-size: 20px;
+	color: #ffffff;
+	background-color: #eb0323;
+	font-family: 'Open Sans';
+}
+
+.rp_button_redeem {
+	margin-right: 10px;
+	cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 20px 10px;
+	width: 45%;
+	
+	position: relative; 
+	font-size: 20px;
+	color: #ffffff;
+	background-color: #eb0323;
+	font-family: 'Open Sans';
+}
+
+
+//////
+.rp_message_top {
+    font-weight: bold;
+    line-height: normal;
+    text-align: center;
+	padding: 0 10px;
+}
+
+.rp_step_checkin_second {
+    margin-top: 70px;
+	text-align: center;
+	vertical-align: center;
+}
+
+
+.cashier_passcode {
+    border: 1px solid #5e5e5e;
+    -moz-box-shadow: inset 0 0 1px #000000;
+   	-webkit-box-shadow: inset 0 0 1px #000000;
+   	box-shadow: inset 0 0 1px #000000;
+   	border-radius: 3px;
+   	margin-right: 4%;
+    width: 40%;
+	height: 65px;
+    padding: 20px;
+	font-size: 16px;
+	// transform: translateY(2px);
+    
+}
+.cashier_passcode:focus {
+	font-size: 16px;
+}
+.cashier_passcode:placeholder {
+    color: #c0c0c0;
+}
+.cashier_points {
+    border: 1px solid #5a4141;
+    -moz-box-shadow:    inset 0 0 1px #000000;
+   	-webkit-box-shadow: inset 0 0 1px #000000;
+   	box-shadow: inset 0 0 1px #000000;
+   	border-radius: 3px;
+   	width: 40%;
+   	padding: 20px;
+	height: 65px;
+	// transform: translateY(5px);
+}
+.rp_step_checkin_third {
+    margin-top: 50px;
+    text-align: center;
+	display: flex;
+}
+
+
+.rp_bt_default {
+	margin-left: 10px;
+	margin-right: 10%;
+	cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 20px 10px;
+	width: 45%;;
+}
+
+.cashier_add_points {
+	margin-right: 10px;
+	cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 20px 10px;
+	width: 45%;
+	
+	position: relative; 
+	font-size: 20px;
+	color: #ffffff;
+	background-color: #eb0323;
+	font-family: 'Open Sans';
+}
+
+.header_reward {
+    color: #5e5c5f;
+    font-weight: 600;
+    padding-left: 32%;
+	display: table-cell;
+    vertical-align: top;
+    padding-left: 5px;
+}
+
+.description_reward {
+    line-height: 20px;
+    padding-bottom: 5px;
+}
+.chevron_wrapper, .date_reward {
+	display: table-cell;
+    vertical-align: middle;
+}
+
+.date_reward {
+	line-height: 1;
+
+	color: #565656;
+	font-size: 13px;
+	font-family: Open Sans
+}
+.ul_list_rewards {
+    padding: 10px;
+    margin: 0;
+	display: table;
+    border-collapse: collapse;
+    /*border: 1px solid #e8e6e9;
+    border-radius: 3px;*/
+}
+.ul_list_rewards .separator {
+	display: block;
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+.ul_list_rewards  li:nth-last-of-type(2) {
+	border-bottom: none;
+}
+
+.ul_list_rewards li {
+    list-style-type: none !important;
+    display: table-row;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.ul_list_rewards li:last-child {
+    border-bottom: none !important;
+}
+
+.image_wrapper {
+	display: table-cell;
+	width: 20%;
+	vertical-align: middle;
+}
+
+}

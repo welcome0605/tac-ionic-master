@@ -1,0 +1,25 @@
+<ion-header no-bounce>
+    <ion-navbar>
+       <menu-back></menu-back>
+        <ion-title>
+            <logo></logo>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce> 
+	<ion-item *ngFor="let item of notification_array; let index=index " 
+    [style.border-bottom]="css.itemInner.borderBottom"
+    >
+        <ion-label
+        [style.color]="css.labelCss.color"
+        [style.font-size]="css.labelCss.size"
+        [style.font-family]="css.labelCss.fontName"
+        [style.padding]="css.labelCss.paddingLeft"
+        >{{item.title}}</ion-label>
+        <ion-toggle 
+          (ionChange)="settingChange(item.title,index)" 
+          [(ngModel)]="notification_array[index]['is_allow']"></ion-toggle>
+    </ion-item>
+
+</ion-content>

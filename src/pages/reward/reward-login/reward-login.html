@@ -1,0 +1,70 @@
+
+<ion-header>
+    <ion-navbar>
+        <menu-back></menu-back>
+        <ion-title>
+            <logo></logo>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="page-content"
+    [style.background-color]="this.css['BackColor']">
+    <form #form="ngForm" (ngSubmit)="onLogin()" novalidate>
+        <div class="loginview_content">
+            <div class="rp_login_logo_row">
+                <img class="rp_login_logo"
+                    [src]="this.css['Logo_Image']"
+                    [style.width] = "'156px'"
+                    [style.height] = "'156px'"
+                    [style.object-fit] = "'fill'">
+            </div>
+            <div class="rp_login_title"
+                [style.font-size]='this.css["Title_Login"]["Font_size"]+"px"'
+                [style.color]='this.css["Title_Login"]["Color"]'
+                [style.font-family]='this.css["Title_Login"]["Font"]'>{{this.css["Title_Login"]["Text"]}}</div>
+            
+            <ion-input id="user_login" type="email" name="email" [style.background-color]="'#ffffff'"
+                [(ngModel)]="data.email" required placeholder="Email"
+                autocorrect="off" autocapitalize="off"></ion-input>
+            
+            <!-- <ion-item class="error-message" *ngIf="email.error?.required && email.dirty">
+                Please input email
+            </ion-item> -->
+
+            <ion-input id="user_pass" type="password" name="password" [style.background-color]="'#ffffff'"
+                    [(ngModel)]="data.password" required placeholder="Password"></ion-input>
+
+            <!-- <ion-item class="error-message" *ngIf="password.error?.required && password.dirty">
+                Please input password
+            </ion-item> -->
+
+            <div class="login-remember-forget">
+                <div id="forgot-pass"><a (click)="showForgot()">Forgot Password?</a></div>
+            </div>
+
+            <div
+                [style.padding-top]="'8px'"
+                [style.padding-bottom]="'0px'">
+                <button ion-button class="login-sign-button" block type="submit"
+                    [style.background-color] = 'this.css["Login_Button"]["Background_Color"]'>Sign In</button>
+            </div>
+
+            <div class="wp-social-login-widget" style="display: block;">
+                <div class="wp-social-login-connect-with">Sign in with</div>
+
+                <div class="rp_login_social">
+                    <img class="rp_login_logo" src="./assets/rewards/facebook.png">
+                    <img class="rp_login_logo" src="./assets/rewards/google.png">
+                </div>
+
+                <div class="wp-social-login-widget-clearing"></div>
+            </div>
+            
+            <div>
+                <button ion-button class="wp-new-account" block type="button" (click)="onSignup()"
+                    [style.background-color] = 'this.css["New_Account_Button"]["Background_Color"]'>CREATE NEW ACCOUNT</button>
+            </div>
+        </div>
+    </form>
+</ion-content>

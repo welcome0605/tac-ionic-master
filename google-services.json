@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "276038107333",
+    "firebase_url": "https://joesice-84103.firebaseio.com",
+    "project_id": "joesice-84103",
+    "storage_bucket": "joesice-84103.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276038107333:android:65dcaf59110f597a",
+        "android_client_info": {
+          "package_name": "com.joesice.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276038107333-70sg3ibuui40bfjbk5dcqs9i6i5nv8io.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.joesice.com",
+            "certificate_hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+          }
+        },
+        {
+          "client_id": "276038107333-5cue8p00vflh3i0gj5btq65cdt1dtlih.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiIVOtZpmFWpEQnaNZjd3s7O8i2MMRu2Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276038107333-5cue8p00vflh3i0gj5btq65cdt1dtlih.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

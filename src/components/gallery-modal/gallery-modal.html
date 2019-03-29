@@ -1,0 +1,52 @@
+<ion-content class="gallery-modal"
+  no-bounce
+  [ngStyle]="modalStyle"
+  (window:resize)="resize($event)"
+  (window:orientationchange)="orientationChange($event)"
+>
+  <button class="close-button" ion-button icon-only (click)="dismiss()">
+    <ion-icon name="{{ closeIcon }}"></ion-icon>
+  </button>
+
+  <div
+    style="display: block; z-index: 10; position: absolute; left: 50%; top: 38px; font-size: 18px; transform: translate(-50%, -10px); color: white; text-align: center;" [hidden]="!displayIndex">
+    {{"" + (currentSlide + 1)}}/{{"" + photos.length}}
+  </div>
+
+  <!-- Initial image while modal is animating -->
+  <div class="image-on-top" [hidden]="sliderLoaded">
+    <zoomable-image
+      [photo]="initialImage"
+      [resizeTriggerer]="resizeTriggerer"
+      [wrapperWidth]="width"
+      [wrapperHeight]="height"
+    ></zoomable-image>
+  </div>
+
+  <!-- Slider with images -->
+  <ion-slides class="slider"
+    #slider
+    *ngIf="photos.length"
+    [initialSlide]="initialSlide"
+    [ngStyle]="slidesStyle"
+    touch-events
+    (ionSlideDrag)="slidesDrag($event)"
+    (ionSlideDidChange)="slideChanged($event)"
+    (panup)="panUpDownEvent($event)"
+    (pandown)="panUpDownEvent($event)"
+    (panend)="panEndEvent($event)"
+    (pancancel)="panEndEvent($event)"
+  >
+    <ion-slide *ngFor="let photo of photos;">
+      <zoomable-image
+        [photo]="photo"
+        [resizeTriggerer]="resizeTriggerer"
+        [wrapperWidth]="width"
+        [wrapperHeight]="height"
+        [ngClass]="{ 'swiper-no-swiping': sliderDisabled }"
+        (disableScroll)="disableScroll($event)"
+        (enableScroll)="enableScroll($event)"
+      ></zoomable-image>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

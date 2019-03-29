@@ -1,0 +1,97 @@
+
+page-album-photo-list{
+.ios , .md
+{
+	page-album-photo-list 
+	{
+		.pins{
+			column-count: 3;
+		}
+		.pin{
+			display: inline-block;
+			margin: 0 2px 2px;
+			padding: 2px;
+		}
+	}
+}
+
+#first-photo-col{
+	-webkit-column-count: 3; 
+	-webkit-column-gap: 0;
+	-webkit-column-fill: balance;
+	-moz-column-count:3; 
+	-moz-column-gap: 0; 
+	-moz-column-fill: balance;
+	visibility: hidden;
+
+	& > div {
+		padding: 2px;
+	}
+}
+
+#photo-list {
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	align-items: flex-start;
+
+	ion-list.list-md {
+		column-count: 3;
+	 	column-gap: 0;
+	    background: transparent;
+	    margin: 0;
+	    margin-top: 4px;
+
+	    ion-item {
+	    	&.item-md.item-block {
+	    		padding-left: 2px !important;
+	    		padding: 2px;	
+	    		
+	    		.item-inner {
+	    			padding: 0;
+	    		}
+
+	    		ion-label.label-md {
+	    			margin: 0;
+	    		}
+	    	}
+	    }
+	}
+
+	.brick {
+	    width: 200px;
+	    float: left;
+	    background: #D26;
+	    border: 2px solid #333;
+	    border-color: hsla(0, 0%, 0%, 0.5);
+	    border-radius: 5px;
+	    height: 200px;
+	    margin-bottom: 10px;
+	}
+}
+
+#album-ion-content {
+	overflow-y: auto;
+	padding: 0 5px;
+	.scroll-content {
+		position: relative;
+		padding: 0;
+		contain: none;
+	}
+}
+
+ion-content {
+	.scroll-content {
+		padding: 0 !important;
+	    padding-top: 0px !important;
+
+	    .brick {
+		    width: 33.3333%;
+		    padding: 2px;
+		    float: left;
+		    background: transparent;
+		}
+	}
+}
+
+}
+

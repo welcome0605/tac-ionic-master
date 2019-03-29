@@ -1,0 +1,99 @@
+<ion-header>
+   <ion-navbar>
+        <menu-back></menu-back>
+        <ion-title>
+            <logo></logo>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce [style.background] = "background">
+    <div  id="sidenav"
+        [style.padding] = "'10px'">
+        <ng-container
+            *ngFor="let p of content_json;let i = index; ">
+            <div *ngIf ="p.type == 'file' && p.subtype == 'image' && p.innerVal.length != 0 && !p.fixed">
+                <img [class]="p.kind"
+                     [src]="p.src" style=" width: 100vw; "/>
+                <div class="backpanel-inner" style="position: absolute;
+                            top: 25px;
+                            left: 25px;
+                            width: calc(100vw - 70px);">
+                    <ng-container
+                        *ngFor="let t of p.innerVal;let j = index; ">
+                        <h1 *ngIf="t.type == 'header' && t.subtype == 'h1'"
+                            [style.color] = "t.color"
+                            [style.background]="t.background"
+                            [style.position] = "t.position">{{ t.label }}</h1>
+                        <p *ngIf="t.type == 'text'"
+                            [style.color] = "t.color"
+                            [style.background]="t.background"
+                            [style.position] = "t.position">{{ t.value }}</p>
+                        <div *ngIf="t.type == 'textarea'"
+                            [style.color] = "t.color"
+                            [style.background]="t.background" [innerHTML]="(t.value || '') | safeHtml"></div>
+                    </ng-container>
+                </div>
+            </div>
+
+            <div *ngIf ="p.type == 'file' && p.subtype == 'image' && p.fixed" [class]="p.kind"
+                style="position: fixed;
+                    z-index:-10;
+                    overflow: hidden;
+                    width: calc(100vw - 20px);"
+                    [style.padding-top]="p.paddingTop+'px'"
+                    [style.padding-bottom]="p.paddingBottom+'px'"
+                    [style.padding-left]="p.paddingLeft+'px'"
+                    [style.padding-right]="p.paddingRight+'px'">
+                <img [src] = "p.src"
+                    [style.width] = "'100%'"
+                    [style.display] = "'block'"
+                />
+            </div>
+            <img *ngIf ="p.type == 'file' && p.subtype == 'image' && p.innerVal.length == 0" [class]="p.kind"
+                [src] = "p.src"
+                [style.width] = "'100%'"
+                [style.display] = "'block'"
+                [style.visibility] = "p.fixed ?'hidden': 'initial'"
+                [style.padding-top]="p.paddingTop+'px'"
+                [style.padding-bottom]="p.paddingBottom+'px'"
+                [style.padding-left]="p.paddingLeft+'px'"
+                [style.padding-right]="p.paddingRight+'px'"/>
+            <div class="form-group">
+                <div *ngIf="p.type == 'textarea'"
+                    [style.color] = "p.color"
+                    [style.background]="p.background"
+                    [style.padding-top]="p.paddingTop+'px'"
+                    [style.padding-bottom]="p.paddingBottom+'px'"
+                    [style.padding-left]="p.paddingLeft+'px'"
+                    [style.padding-right]="p.paddingRight+'px'"
+                    [innerHTML]="(p.value || '') | safeHtml"></div>
+            </div>
+            <div *ngIf = "p.type == 'slideshow' && p.values.length > 0"
+                [style.z-index] = "'0'" >
+                <ion-slides
+                    loop = "true"
+                    #nSlider
+                    [title] = "'slide' + i"
+                    [slidesPerView]="'2'"
+                    [spaceBetween]="'10px'"
+                    [autoplay]="'1000'"
+                    [speed]="'2000'"
+                    pager>
+                    <ion-slide *ngFor = "let v of p.values; let index = index; ">
+                        <img (click) = "picselect(p.values, index)"
+                            [src] = "v['source']"
+                            [style.width] = "'100vw'"
+                            [style.height] = "'30vw'"
+                            [style.object-fit] = "'cover'"/>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+            
+        </ng-container>
+        <ng-container>
+            <div class="bottom-filler" [style.background] = "background">
+            </div>
+        </ng-container>
+    </div>
+</ion-content>

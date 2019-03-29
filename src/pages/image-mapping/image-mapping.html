@@ -1,0 +1,22 @@
+<ion-header>
+	<ion-navbar>
+		<menu-back></menu-back>
+		<ion-title>
+			<logo></logo>
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content style="background-color: #111f2a;text-align: center;" id="imageContent" no-bounce>
+	<figure id="projectsvg"> 
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1380 2300" preserveAspectRatio="xMinYMin meet" > 
+			<image [attr.xlink:href]="image" class="test_img" id="logoID"> </image>
+			<g class="hover_group" opacity="0" *ngFor="let item of masterCoords">
+				<a xlink:href="javascript:void(0)" (click)="openPage(item.value)"> 
+					<rect [attr.x]="item.x" [attr.y]="item.y" opacity="0.0" fill="#FFFFFF" [attr.width]="item.width" [attr.height]="item.height"></rect> 
+				</a> 	
+			</g>
+		</svg>
+	</figure>
+</ion-content>

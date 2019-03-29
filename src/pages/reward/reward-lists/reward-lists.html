@@ -1,0 +1,65 @@
+
+<ion-header>
+    <ion-navbar>
+        <menu-back></menu-back>
+        <ion-title>
+            <logo></logo>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="page-content"
+    [style.background-color]="this.css['BackColor']">
+    
+    <div class="rewards_program_redeem_info"
+        style = "min-height: calc(100% - 50px)"
+        [style.display]="'block'">
+        <div class="rp_member_points">{{totalPoints}} {{this.css["UnusedUnit"]}}</div>
+        <!-- <style>body,.site-inner{background-color:#f9f9f9}.ul_list_rewards li{border-bottom:1px solid #e8e6e9}</style> -->
+        <ul class="ul_list_rewards">
+            <li *ngFor="let item of rewardLists; let i=index;"
+                data-id="1" [ngClass] = "totalPoints>=item.cost ? 'li_reward reward_available' : 'li_reward reward_not_available'" (click)="onSelect(i)"
+                [style.border-bottom] = "'1px solid #e2e2e2'">
+                <div class="image_wrapper">
+                    <img src="{{item.image}}"
+                        [style.width] = "'100px'"
+                        [style.height] = "'100px'"
+                        [style.object-fit] = "'fill'">
+                </div>
+                <div class="header_reward">
+                    <div class="title_reward"
+                        [style.color]='this.css["Reward_Title"]["Color"]'
+                        [style.font-size]='this.css["Reward_Title"]["Font_size"]+"px"'
+                        [style.font-family]='this.css["Reward_Title"]["Font"]'>{{item.name}}</div>
+                    <div class="description_reward"
+                        [style.color]='this.css["Reward_Description"]["Color"]'
+                        [style.font-size]='this.css["Reward_Description"]["Font_size"]+"px"'
+                        [style.font-family]='this.css["Reward_Description"]["Font"]'>{{item.description}}</div>
+                    <div class="cost_reward"
+                        [style.color]='this.css["Reward_Cost"]["Color"]'
+                        [style.font-size]='this.css["Reward_Cost"]["Font_size"]+"px"'
+                        [style.font-family]='this.css["Reward_Cost"]["Font"]'>{{item.cost}} {{item.cost > 1 ? this.css["UnitPL"] : this.css["UnitSN"]}}</div>
+                </div>
+                <i class="fa fa-chevron-right" *ngIf="totalPoints>=item.cost"
+                    aria-hidden="true"
+                    [style.color] = "this.css['Arrow']['Color']"
+                    [style.font-size]="'30px'"
+                    [style.top] = "'50px'"
+                    [style.transform] = "'translate(0px, -50%)'"
+                    [style.position] = "'relative'"
+                    [style.right] = "'10px'"></i>
+            </li>
+        </ul>
+
+        <div class="rp_step_checkin_fourth">
+            <div class="rp_bt_continue" (click)="onBack()"
+                [style.background-color] = "this.css['Back_Button']['Background_Color']"
+                [style.font-family] = "this.css['Back_Button']['Font']"
+                [style.font-size] = "this.css['Back_Button']['Font_Size']+'px'"
+                [style.color] = "this.css['Back_Button']['Color']">{{this.css['Back_Button']['Text']}}</div>
+        </div>
+    </div>
+
+    <setting-bar style = "display:block" (logoutClicked)="onLogout()" (historyClicked)="onHistory()"></setting-bar>
+            
+</ion-content>

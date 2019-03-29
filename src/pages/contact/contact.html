@@ -1,0 +1,141 @@
+<ion-header>
+   <ion-navbar>
+        <menu-back></menu-back>
+        <ion-title>
+            <logo></logo>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce [style.background] = "background">
+    <div  id="sidenav"
+        [style.padding] = "'12px'"
+        [style.margin-top] = "'16px'"
+        [style.margin-left] = "'12px'"
+        [style.margin-right] = "'12px'"
+        [style.font-family] = "'Roboto'"
+        [style.font-size] = "'12px'">
+        <form (submit)="submit()">
+            <ng-container
+                *ngFor="let p of contact_json;let i = index; ">
+                <div *ngIf ="p.type == 'file' && p.subtype == 'image' && p.innerVal.length != 0 && !p.fixed" [class] = "p.className"
+                    [style.background-image] = "'url(' + p.src + ')'"
+                    [style.background-size] = "'cover'"
+                    [style.padding] = "'6px'">
+                    <div
+                        *ngFor="let t of p.innerVal;let j = index; ">
+                        <h1 *ngIf="t.type == 'header' && t.subtype == 'h1'"
+                            [style.color] = "t.color"
+                            [style.background]="t.background"
+                            [style.position] = "t.position"
+                            [style.font-size] = "'36px'">{{ t.label }}</h1>
+                            
+                        <ng-container *ngIf="t.type == 'text'">
+                            <div class="form-group">
+                                <label>{{ t.label }}<span *ngIf="t.required">*</span></label>
+                                <input  
+                                    [type]="t.subtype"
+                                    [class]="t.className"
+                                    [placeholder] = "t.placeholder || ''"
+                                    [style.position] = "t.position" />
+                            </div>
+                        </ng-container>
+
+                        <button *ngIf="t.type == 'button'" 
+                            [type]="t.subtype"
+                            [class]="t.className">
+                            {{ t.label }}
+                        </button>
+
+                        <ng-container *ngIf="t.type == 'textbox'">
+                            <div class="form-group">
+                                <label>{{ t.label }}<span *ngIf="t.required">*</span></label>
+                                <textarea
+                                    [class]="t.className"
+                                    [placeholder] = "t.placeholder || ''"
+                                    [style.height] = "'120px'"
+                                    [style.font-size] = "'14px'"
+                                    [style.color] = "t.color"
+                                    [style.background]="t.background"
+                                    [style.padding-top.px]="t.paddingTop"
+                                    [style.padding-bottom.px]="t.paddingBottom"
+                                    [style.padding-left.px]="t.paddingLeft"
+                                    [style.padding-right.px]="t.paddingRight"></textarea>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+
+                <div *ngIf ="p.type == 'file' && p.subtype == 'image' && p.fixed" [class]="p.className"
+                    style="position: fixed;
+                        z-index:-10;
+                        overflow: scroll;
+                        width: calc(100vw - 20px);">
+                    <img [src] = "p.src"
+                        [style.width] = "'100%'"
+                        [style.display] = "'block'"/>
+                </div>
+                <img *ngIf ="p.type == 'file' && p.subtype == 'image' && p.innerVal.length == 0" [class]="p.className"
+                        [src] = "p.src"
+                        [style.width] = "'100%'"
+                        [style.display] = "'block'"
+                        [style.visibility] = "p.fixed ?'hidden': 'initial'"/>
+
+                <h1 *ngIf="p.type == 'header' && p.subtype == 'h1'"
+                    [style.color] = "p.color"
+                    [style.background]="p.background">{{ p.label }}</h1>
+                
+                <ng-container *ngIf="p.type == 'text'">
+                    <div class="form-group">
+                        <label>{{ p.label }}<span *ngIf="p.required">*</span></label>
+                        <input  
+                            [style.height] = "'30px'"
+                            [type]="p.subtype"
+                            [class]="p.className"
+                            [placeholder] = "p.placeholder || ''"
+                            [style.position] = "p.position" />
+                    </div>
+                </ng-container>
+
+                <div class="form-group">
+                    <button *ngIf="p.type == 'button'" 
+                        [type]="p.subtype"
+                        [class]="p.className">
+                        {{ p.label }}
+                    </button>
+                </div>
+
+                <ng-container *ngIf="p.type == 'textbox'">
+                    <div class="form-group">
+                        <label>{{ p.label }}<span *ngIf="p.required">*</span></label>
+                        <textarea
+                            [class]="p.className"
+                            [placeholder] = "p.placeholder || ''"
+                            [style.height] = "'120px'"
+                            [style.font-size] = "'14px'"
+                            [style.color] = "p.color"
+                            [style.background]="p.background"
+                            [style.padding-top.px]="p.paddingTop"
+                            [style.padding-bottom.px]="p.paddingBottom"
+                            [style.padding-left.px]="p.paddingLeft"
+                            [style.padding-right.px]="p.paddingRight"></textarea>
+                    </div>
+                </ng-container>
+
+                <ion-slides *ngIf = "p.type == 'slideshow' && p.values.length > 0" autoHeight = "false" slidesPerView="2" spaceBetween="10px" autoplay="2000" loop="true" speed="500" pager="true">
+                    <ion-slide *ngFor = "let v of p.values">
+                        <img [src] = "v['source']"
+                            [style.width] = "'100vw'"
+                            [style.height] = "'30vw'"
+                            [style.object-fit] = "'cover'">
+                    </ion-slide>
+                </ion-slides>
+                
+            </ng-container>   
+            <ng-container>
+                <div class="bottom-filler" [style.background] = "background">
+                </div>
+            </ng-container>         
+        </form>
+    </div>
+</ion-content>

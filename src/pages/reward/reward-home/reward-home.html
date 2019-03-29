@@ -1,0 +1,76 @@
+
+<ion-header>
+    <ion-navbar>
+        <menu-back></menu-back>
+        <ion-title>
+            <logo></logo>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="page-content"
+    [style.background-image] = "'url('+this.css['BackImg']+')'"
+    [style.background-size] = "'100% 100%'"
+    [style.background-color]="this.css['BackColor']">
+    <div class="rewards_program_home"
+        style = "min-height: calc(100% - 50px)"
+        [style.display]="block">
+        <div class="rp_login_logo_row">
+            <img class="rp_login_logo"
+                [src]="this.css['HeaderImg']">
+        </div>
+
+        <div class="rp_step1"
+            [style.padding-top] = "'50px'">
+            <div class="rp_row_top">
+                <div class="rp_row_top_left">
+                    <img class="rp_product_img"
+                        [src]="this.css['IconImg']">
+                </div>
+                <div class="rp_row_top_right">
+                    <div class="rp_product_point"
+                        [style.font-family] = "this.css['PointPunchTextFormat']['Font']"
+                        [style.font-size]="this.css['PointPunchTextFormat']['Font_Size'] + 'px'"
+                        [style.font-color] = "this.css['PointPunchTextFormat']['Font_Color']"
+                        [style.color] = "this.css['PointPunchTextFormat']['Color']">{{productMessage}}</div>
+                    <div class="rp_product_title"
+                        [style.font-family] = "this.css['CardMsg']['Font']"
+                        [style.font-size] =  "this.css['CardMsg']['Font_Size'] + 'px'"
+                        [style.color] =  "this.css['CardMsg']['Color']">{{this.css["CardMsg"]["Text"]}}</div>
+                </div>
+            </div>
+            <div class="have_earnedtext" *ngIf="this.css['IsPunchSystem']"
+                [style.padding-top] = "'25px'"
+
+                [style.font-family] = "this.css['RewardsUnit']['Font']"
+                [style.font-size] = "this.css['RewardsUnit']['Font_Size']+'px'"
+                [style.color] = "this.css['RewardsUnit']['Color']">{{reward}} {{this.css["RewardsUnit"]["Text"]}}</div>
+            <div class="rp_row_second">
+                <div class="rp_button_checkin" (click)="onCheckin()"
+                [style.font-size] = "this.css['CHECK_IN']['Font_Size']+'px'"
+                [style.font-family] = "this.css['CHECK_IN']['Font']"
+                [style.background-color] = "this.css['CHECK_IN']['Background_Color']"
+                [style.color] = "this.css['CHECK_IN']['Color']">{{this.css["CHECK_IN"]["Text"]}}</div>
+                <div class="rp_button_redeem" (click)="onRedeem()"
+                [style.font-size] = "this.css['REDEEM']['Font_Size']+'px'"
+                [style.font-family] = "this.css['REDEEM']['Font']"
+                [style.background-color] = "this.remain <= 0 ? 'rgb(170, 170, 170)' : this.css['REDEEM']['Background_Color']"
+                [style.color] = "this.remain <= 0 ? 'rgb(85, 85, 85)' : this.css['REDEEM']['Color']">{{this.css["REDEEM"]["Text"]}}</div>
+            </div>
+        </div>
+        
+        <div class="rp_row_third" *ngIf="this.css['IsPunchSystem']">
+            <ul class="punch_style_Square">
+                <li *ngFor="let item of TenArray; let i = index;" 
+                    [style.background-color] = "(i<this.remain)? this.css['PunchStyle']['Fill_Color'] : 'transparent'"
+                    [style.border-style] = "'solid'"
+                    [style.border-color] = "this.css['PunchStyle']['Outline_Color']"
+                    [style.border-radius] = "this.css['PunchStyle']['BorderRadius']">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <setting-bar style = "display:block" (logoutClicked)="onLogout()" (historyClicked)="onHistory()"></setting-bar>
+
+</ion-content>

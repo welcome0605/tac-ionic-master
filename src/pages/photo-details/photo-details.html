@@ -1,0 +1,31 @@
+<ion-header>
+   <ion-navbar>
+        <menu-back></menu-back>
+        <ion-title>
+            <logo></logo>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding no-bounce>
+        <div style="text-align: center; height: 100%;">
+            <ion-slides [zoom]='true' min-zoom="1.0"
+            max-zoom="2.5" loop="true" >
+                <ion-slide *ngFor="let x of data; let index = index; " style="overflow-y:auto;">
+                    <div class="swiper-zoom-container">
+                       <img src="{{x.image}}"
+                        style="height: auto; width: auto; display: block;" (dblclick)="zoomImage()" 
+                        [style.color]="css.labelCss.color"
+                        [style.font-size]="css.labelCss.size"
+                        [style.font-family]="css.labelCss.fontName"
+                        [style.padding]="css.labelCss.paddingLeft"
+                        [style.border-bottom]="css.labelCss.borderBottom"
+                        > 
+                    </div>
+                    <h3> {{x.description}} </h3>
+                </ion-slide>
+            </ion-slides>
+        </div>
+</ion-content>
+
+

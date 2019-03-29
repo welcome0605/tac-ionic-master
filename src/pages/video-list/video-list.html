@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+        <menu-back *ngIf="!videoShowing"></menu-back>
+        <ion-title>
+            <logo></logo>
+        </ion-title>
+        <ion-buttons *ngIf="videoShowing" left>
+            <button ion-button icon-only (click)="back()">
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce
+[style.color]="css.contentCss.color"
+no-bounce>
+    <ion-list *ngIf="!videoShowing">
+        <ion-row
+        [style.margin]="css.videoListCss.margin"
+        [style.padding]="css.videoListCss.paddingLeft"
+        [style.border-bottom]="css.videoListCss.borderBottom"
+        *ngFor="let item of videoList" (click)="videoClicked(item.snippet.resourceId.videoId)">
+            <ion-col col-6>
+                <img src="{{item.snippet.thumbnails.medium.url}}">
+            </ion-col>
+            <ion-col col-12 style="margin: -2px 0px 6px 0px; position: relative; overflow: hidden;"
+            text-left>
+                <div style="position: absolute; top: 0; margin: 0; width: 100%;"
+                [style.font-size]="css.contentCss.fontSize"
+                [style.font-family]="css.contentCss.fontName"
+                >
+                    {{ item.snippet.title}}
+                </div>
+            </ion-col>
+            <ion-col col-1 style="margin: -2px 0px 0px 0px; position: relative;"
+            [style.font-size]="css.arrowCss.fontSize"
+            [style.left]="css.arrowCss.left"
+            >
+                <ion-icon name="ios-arrow-forward" style="position: absolute;top: 50%; transform: translate(0, -50%); right: 40px;"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </ion-list>
+    <div *ngIf="videoShowing" style="background: black;">
+        <iframe class="youtube_iframe" width="100%" height="211" [src]="currentVideoUrl" frameborder="0" allowfullscreen></iframe>
+    </div>
+</ion-content>

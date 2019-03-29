@@ -1,0 +1,56 @@
+page-locations-details {
+    .cst_backButton{
+        .back-button.show-back-button{
+            display: none !important;
+        }
+    }
+    .button-ios
+    {
+        padding-left: 11px !important;
+    }
+iframe 
+{
+    border-width: 0px;
+    border-style: inset;
+    border-color: initial;  
+    border-image: initial;
+
+}
+.scroll-content 
+{
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    will-change: scroll-position;
+    contain: size style layout;
+}
+.button-ios{
+    background-color: transparent !important;
+    font-size: 27px;
+}
+.button-md, .button-md:hover:not(.disable-hover){
+    background-color: transparent !important;
+    font-size: 20px;
+}
+}
+
+.load
+{
+    background-image: url("http://www.ajaxload.info/images/exemples/25.gif");   
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: absolute;
+    width:100%;
+    height:100%;
+}
+
+iframe
+{
+    position:relative;
+}

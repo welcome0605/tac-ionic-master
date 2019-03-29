@@ -1,0 +1,51 @@
+
+<ion-header>
+    <ion-navbar>
+        <menu-back></menu-back>
+        <ion-title>
+            <logo></logo>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="page-content">
+        <div class="rewards_program_checkin"
+            style = "min-height: calc(100% - 50px)">
+            <div class="rp_step_checkin_top">
+                <div class="rp_message_top"
+                    [style.font-family] = "this.css['Cashier']['Font']"
+                    [style.font-size] = "this.css['Cashier']['Font_Size']+'px'"
+                    [style.color] = "this.css['Cashier']['Color']">{{this.css["Cashier"]["Text"]}}</div>
+            </div>
+            <form #form="ngForm" (ngSubmit)="onCheckin()" novalidate>
+                <div class="rp_step_checkin_second">
+                    <input placeholder="PASSCODE" class="cashier_passcode" type="password" name="passcode" [(ngModel)]="data.passcode">
+                    <!-- <ion-input class="cashier_passcode" type="password" name="passcode" 
+                            [(ngModel)]="data.cashier_passcode" required placeholder="PASSCODE"></ion-input>
+                -->
+                    <!-- <ion-select [(ngModel)]="cashier_stamp" class="cashier_points" [ngModelOptions]="{standalone: true}">
+                        <ion-option *ngFor="let item of TenArray; let i = index;" values="item">{{item}} Stamps</ion-option>
+                    </ion-select> -->
+                    <select class="cashier_points" [(ngModel)]="data.points" name="points" [ngModelOptions]="{standalone: true}"
+                        [style.transform] = "'translateY(5px)'">
+                        <option *ngFor="let sd of StampDataArray; let i = index;" value={{i+1}} data-punch="points" name="points" selected="{{i==0 ? 'true' : 'false'}}">{{sd}}</option>
+                    </select>
+                </div>
+            </form>
+            <div class="rp_step_checkin_third">
+                <div class="rp_bt_default" (click)="onBack()"
+                    [style.background-color] = 'this.css["BACK"]["Background_Color"]'
+                    [style.font-family] = 'this.css["BACK"]["Font"]'
+                    [style.font-size] = 'this.css["BACK"]["Font_Size"]+"px"'
+                    [style.color] = 'this.css["BACK"]["Color"]'>{{this.css['BACK']['Text']}}</div>
+                <div class="cashier_add_points" (click)="onCheckin()"
+                    [style.font-size] = "this.css['CHECK_IN']['Font_Size']+'px'"
+                    [style.font-family] = "this.css['CHECK_IN']['Font']"
+                    [style.background-color] = "this.css['CHECK_IN']['Background_Color']"
+                    [style.color] = "this.css['CHECK_IN']['Color']">{{this.css["CHECK_IN"]["Text"]}}</div>
+            </div>
+        </div>
+
+        <setting-bar style = "display:block" (logoutClicked)="onLogout()" (historyClicked)="onHistory()"></setting-bar>
+            
+</ion-content>

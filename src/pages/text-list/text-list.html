@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+       <menu-back></menu-back>
+        <ion-title>
+            <logo></logo>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding no-bounce>
+    <ion-item *ngFor="let item of list" 
+        (click)="openPageInner(item.type,item)" 
+        
+        [style.border-bottom]="css.labelCss.borderBottom">
+        <ion-label
+        [style.padding]="css.labelCss.paddingLeft"
+        [style.font-family]="css.labelCss.fontName"
+        [style.font-size]="css.labelCss.size"
+        [style.color]="css.labelCss.color"
+        >{{item.title}}</ion-label>
+    </ion-item>
+</ion-content>

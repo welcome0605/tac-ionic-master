@@ -1,0 +1,18 @@
+<ion-header>
+	<ion-navbar>
+		<menu-back></menu-back>
+		<ion-title>
+			<logo></logo>
+		</ion-title>
+		<ion-buttons *ngIf="kind != 'pdf'" start (click)="back()">
+	      <button ion-button icon-only [disabled]="!backable"><ion-icon name="arrow-back"></ion-icon></button>
+	    </ion-buttons>
+	    <ion-buttons *ngIf="kind != 'pdf'" end (click)="forward()">
+	      <button ion-button icon-only [disabled]="!forwardable"><ion-icon name="arrow-forward"></ion-icon></button>
+	    </ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content no-bounce >
+	<iframe class="load" [src]="iFrameUrl" sandbox="allow-forms allow-popups allow-pointer-lock allow-same-origin allow-scripts" allowfullscreen allowTransparency="true" allow="encrypted-media" #menuContent (load)="onFrameLoad($event)" [id]="id"></iframe>
+</ion-content>

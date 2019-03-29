@@ -1,0 +1,39 @@
+
+<a class="rp_settings"
+	(click) = "toggleSetting(true)">
+	<i class="fa fa-cog" aria-hidden="true"
+		[style.font-size]="'30px'"
+		[style.color]="this.css['GearIconColor']"></i>
+</a>
+
+<div id = "lean_overlay"
+	[style.display] = "this.settingAnim == ''? 'none': 'block'"
+	[style.z-index] = "'500'"
+	[style.animation-name] = "this.settingAnim == ''? '': 'lean'+this.settingAnim"
+	[style.-webkit-animation-name] = "this.settingAnim == ''? '': 'lean'+this.settingAnim"
+	[style.opacity] = "'0'"
+	(click) = "toggleSetting(false)"></div>
+	
+<div id="rp_settings"
+	[style.display] = "this.settingAnim == ''? 'none': 'block'"
+	[style.z-index] = "'1000'"
+	[style.animation-name] = "this.settingAnim == ''? '': 'dlg'+this.settingAnim"
+	[style.-webkit-animation-name] = "this.settingAnim == ''? '': 'dlg'+this.settingAnim"
+	[style.opacity] = "'0'"
+	[style.background-color]="this.css['SettingBackColor']"
+	[style.position]="'fixed'"
+	[style.left]="'50%'"
+	[style.top]="'50%'"
+	[style.transform] = "'translate(-50%, -50%)'">
+	<div class="rp_settings_history" (click)="onHistory()"
+		[style.color]='this.css["HistoryButton"]["Color"]'
+		[style.font-size]='this.css["HistoryButton"]["Font_Size"]+"px"'
+		[style.background-color]='this.css["HistoryButton"]["Background_Color"]'
+		[style.font-family]='this.css["HistoryButton"]["Font"]'>{{this.css["HistoryButton"]["Text"]}}</div>
+	<div class="rp_settings_logout" (click)="onLogout()"
+		[style.color]='this.css["LogoutButton"]["Color"]'
+		[style.font-size]='this.css["LogoutButton"]["Font_Size"]+"px"'
+		[style.background-color]='this.css["LogoutButton"]["Background_Color"]'
+		[style.font-family]='this.css["LogoutButton"]["Font"]'
+		[style.margin-top]="'35px'">{{this.css["LogoutButton"]["Text"]}}</div>
+</div>

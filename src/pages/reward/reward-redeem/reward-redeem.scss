@@ -1,0 +1,85 @@
+page-reward-redeem {
+
+.rewards_program, .rewards_program_home, .rewards_program_stamp_input {
+	margin: 0 auto;
+	max-width: 590px;
+	padding: 10px;
+}
+
+//////
+.rp_message_top {
+    font-weight: bold;
+    line-height: normal;
+    text-align: center;
+	padding: 0 10px;
+}
+
+.rp_step_checkin_second {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.rp_step_checkin_fourth {
+	text-align: center;
+	display: inherit;
+    line-height: 1;
+    margin: 15px 0;
+}
+
+.cashier_passcode {
+    border: 1px solid #5e5e5e;
+    -moz-box-shadow: inset 0 0 1px #000000;
+   	-webkit-box-shadow: inset 0 0 1px #000000;
+   	box-shadow: inset 0 0 1px #000000;
+   	border-radius: 3px;
+   	margin-right: 4%;
+    width: 50%;
+	height: 65px;
+    padding: 20px;
+	font-size: 16px;
+    
+}
+.cashier_passcode:focus {
+	font-size: 16px;
+}
+.cashier_passcode:placeholder {
+    color: #c0c0c0;
+}
+.cashier_points {
+    border: 1px solid #5e5e5e;
+    -moz-box-shadow:    inset 0 0 1px #000000;
+   	-webkit-box-shadow: inset 0 0 1px #000000;
+   	box-shadow: inset 0 0 1px #000000;
+   	border-radius: 3px;
+   	width: auto;
+   	padding: 20px;
+   	height: 65px;
+}
+.rp_step_checkin_third {
+    margin-top: 50px;
+    text-align: center;
+	display: flex;
+}
+
+.rp_bt_default {
+	margin-left: 10px;
+	margin-right: 10%;
+	cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 20px 10px;
+	width: 45%;
+}
+
+.cashier_add_points {
+	margin-right: 10px;
+	cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 20px 10px;
+	width: 45%;
+	
+	position: relative; 
+}
+
+}

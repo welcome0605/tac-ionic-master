@@ -1,0 +1,31 @@
+page-rss-feed {
+	.label-ios
+	{
+		padding-left: 25px;
+    background-color: transparent !important;
+	}
+	.label-md
+	{
+		padding-left: 25px;
+		padding-right: 5px;
+		background-color: transparent !important;
+	}
+	.list-md
+	{
+		height: auto;
+	}
+	.item-block
+	{
+    min-height: 1rem;
+    background-color: transparent !important;
+	}
+	ion-label
+	{
+		white-space: normal;
+	}
+	button
+	{
+		height: 115px;
+	}
+
+}

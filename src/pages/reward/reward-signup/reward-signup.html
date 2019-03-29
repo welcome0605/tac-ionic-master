@@ -1,0 +1,55 @@
+
+<ion-header>
+  <ion-navbar>
+      <menu-back></menu-back>
+      <ion-title>
+          <logo></logo>
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="page-content"
+    [style.background-color]="this.css['BackColor']">
+    <form #form="ngForm" (ngSubmit)="onSignup()" novalidate>
+        <div class="loginview_content">
+            <div class="rp_login_logo_row">
+                <img class="rp_login_logo"
+                    [src]="this.css['Logo_Image']">
+            </div>
+            <div class="rp_login_title"
+                [style.font-size]="this.css['Title_Register']['Font_Size']+'px'"
+                [style.color]="this.css['Title_Register']['Color']"
+                [style.font-family]="this.css['Title_Register']['Font']">{{this.css["Title_Register"]["Text"]}}</div>
+
+            <div class="register-names">
+                <ion-input type="text" id="first_name" name="fname"
+                    [(ngModel)]="data.fname" required placeholder="First Name"
+                    autocorrect="off" autocapitalize="off" size="20"
+                    [style.width] = "'50%'" [style.background-color]="'#ffffff'"></ion-input>
+                <ion-input type="text" id="last_name" name="lname"
+                    [(ngModel)]="data.lname" required placeholder="Last Name"
+                    autocorrect="off" autocapitalize="off"
+                    [style.width] = "'50%'" [style.background-color]="'#ffffff'"></ion-input>
+            </div>
+            <ion-input id="user_email" type="email" name="email" [style.background-color]="'#ffffff'"
+                [(ngModel)]="data.email" required placeholder="Email Address"
+                autocorrect="off" autocapitalize="off"></ion-input>
+            <ion-input id="user_pass" type="password" name="password" [style.background-color]="'#ffffff'"
+                [(ngModel)]="data.password" required placeholder="Password"
+                autocorrect="off" autocapitalize="off"></ion-input>
+            <ion-input id="user_re_pass" type="password" name="repass" [style.background-color]="'#ffffff'"
+                [(ngModel)]="data.repass" required placeholder="Re-Enter Password"
+                autocorrect="off" autocapitalize="off"></ion-input>
+        
+            <div [style.padding-top]="'8px'" [style.padding-bottom]="'8px'">
+                <button ion-button class="login-sign-button" block type="submit"
+                    [style.background-color] = 'this.css["Register_Button"]["Background_Color"]'>CREATE NEW ACCOUNT</button>
+            </div>
+          
+            <div>
+                <button ion-button class="wp-new-account" block type="button" (click)="onBack()"
+                [style.background-color] = 'this.css["Back_Button"]["Background_Color"]'>BACK TO LOGIN</button>
+            </div>
+        </div>
+    </form>
+</ion-content>

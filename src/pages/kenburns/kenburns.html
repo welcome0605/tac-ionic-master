@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-navbar>
+       <menu-back></menu-back>
+        <ion-title>
+            <logo></logo>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page" no-bounce>
+    <div [ngClass]="(i == 0) ? 'first' : ''" *ngFor="let p of pages;let i = index ;" 
+    [style.padding]="css.kenburnListBanner.padding" 
+    >
+        <ion-card class="modal-content" style="margin: 0px;"
+        (click)="openPageInner(p.type,p)"
+        [style.border]="css.kenburnListBanner.border"
+        [style.border-radius]="css.kenburnListBanner.radius"
+        [style.width]="css.kenburnListBanner.width"
+        [style.min-height]="'36px'"
+        > 
+            <img [src]="imageUrl + p.image" />      
+            <div *ngIf="p.title.length>0"
+            [style.bottom]="css.kenburnListTitle.bottom"
+            [style.color]="css.kenburnListTitle.color"
+            [style.text-align]="css.kenburnListTitle.alignment"
+            [style.font-size]="css.kenburnListTitle.size"
+            [style.font-family]="css.kenburnListTitle.fontName"
+            [style.position] = "'absolute'" 
+            [style.content] = "''"
+            [style.background] = "css.kenburnListTitle.backgroundColor"
+            [style.display] = "css.kenburnListTitle.display"
+            [style.width] = "'calc(100% - 0px)'"
+            > 
+                <div style="margin: 0 0 0 5px;">       
+                    {{p.title}}
+                    <ion-icon 
+                    [style.font-size]="css.kenburnIcon.fontSize"
+                    [style.margin]="css.kenburnIcon.margin"
+                    [style.float]="'right'"
+                    *ngIf="p.title.length>0" name="ios-arrow-dropright"></ion-icon>  
+                </div> 
+            </div>
+        </ion-card>
+    </div>
+</ion-content>

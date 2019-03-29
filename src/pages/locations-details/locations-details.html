@@ -1,0 +1,17 @@
+<ion-header no-bounce>
+    <ion-navbar [ngClass]="{'cst_backButton' : (showBack == true)}">
+        <menu-back></menu-back>
+        <button ion-button *ngIf="showBack" (click)="backClick()" clear>            
+            <ion-icon name="ios-arrow-back" 
+            [style.color]="menuIcon.color">
+            </ion-icon>
+        </button>
+        <ion-title>
+            <logo></logo>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content scroll="true" overflow-scroll="true" no-bounce>
+    <iframe class="load" [src]="url" width="100%" height="100%" allowfullscreen id="menuContent" #menuContent (load)="onFrameLoad($event)"></iframe>
+</ion-content>

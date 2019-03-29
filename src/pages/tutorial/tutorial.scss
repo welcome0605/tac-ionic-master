@@ -1,0 +1,27 @@
+page-tutorial {
+	& > ion-content.content {
+		& > .scroll-content {
+			margin-top: 0 !important;
+			overflow: hidden !important;
+		}
+
+		iframe {
+			position: absolute;
+		    top: calc(50% - 105px);
+		    left: 0;
+		}
+	}
+	.swiper-slide {
+		img, video {
+			max-height: 100%;
+			max-width: 100%;
+		}	
+	} 
+	.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{
+		bottom: 50px !important;
+		position: fixed;
+	}
+	.slide-zoom{
+		height: 100% !important;
+	}
+}

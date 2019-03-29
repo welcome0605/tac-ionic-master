@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-navbar>
+        <menu-back></menu-back>
+        <ion-title>
+            <logo></logo>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding no-bounce> <!-- id="album-ion-content"> -->
+    <masonry [useImagesLoaded]="true">
+        <masonry-brick class="brick" *ngFor = "let x of items; let index = index; ">
+            <img id="image" src="{{x.image}}" (click)="picselect(index)" style="width:100%; height:100%;" >
+        </masonry-brick>
+    </masonry>
+    
+    <!-- <ion-col class = "content"  id="first-photo-col">
+        <ion-row id = "album-content">
+            <div *ngFor="let x of items; let index = index; " >
+                <img id="image" src="{{x.image}}" (click)="picselect(index)" style="width:100%; height:100%;" >                                       
+            </div>
+        </ion-row>
+    </ion-col> -->
+
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)" >
+        <ion-infinite-scroll-content 
+                loadingSpinner = "bubbles" 
+                loadingText="Loading more images...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>
+

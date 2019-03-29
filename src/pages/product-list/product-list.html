@@ -1,0 +1,20 @@
+<ion-header>
+	<ion-navbar>
+	<menu-back></menu-back>
+		<ion-title>Product List</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding no-bounce>
+	{{productListData | json}}
+	<ion-card *ngFor = "let data of productListData; let index = index; " (tap)="openProductDetail();">
+		<img src="{{imageUrl}}{{data[index].image}}"/>
+		<ion-card-content>
+			<ion-card-title>
+				{{data[index].productName}}
+			</ion-card-title>
+		</ion-card-content>
+	</ion-card>
+</ion-content>

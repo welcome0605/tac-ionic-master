@@ -1,0 +1,53 @@
+page-kenburns 
+{
+	ion-card 
+	{
+		position: relative;
+		img {
+			width: 100%;
+    		height: calc((100vw - 8px) * 640/1240);
+		}
+	}
+
+
+	//For hope
+	// .scroll-content{
+	// 	margin-top: 60px !important;
+	// }
+	
+	//For Joe's Ice
+	// .scroll-content{
+	// 	margin-top: 70px !important;
+	// }
+	.card-md
+	{
+		box-shadow: none !important;
+	}
+	.card-ios
+	{
+		box-shadow: none !important;
+	}
+}
+.ios{
+	page-kenburns {
+
+		.first{
+			padding-top: 4px !important;
+		}
+
+		// For Hope Wines
+
+		// .scroll-content{
+		// 	margin-top: 68px !important;
+		// }
+
+		//For Joe's Ice
+
+		// .scroll-content{
+		// 	margin-top: 75px !important;
+		// }	
+	}	
+}
+ion-icon{
+	line-height: 1.5;
+}

@@ -1,0 +1,278 @@
+{
+    "settings": {
+        "Punch_Card_System": {
+            "User_Punch_Card_System": {
+                "Type": "1"
+            },
+            "Style": {
+                "Type": "1",
+                "Fill_Color": "#2998d2",
+                "Outline_Color": "#2998d2"
+            }
+        },
+        "Points_Per_Check_In": {
+            "Minimum": 1,
+            "Maximum": 10,
+            "Increment": 1
+        },
+        "Rewards_Card": {
+            "Background_Color": "#ffffff",
+            "Background_Image": "",
+            "Header_Image": "",
+            "Icon_Image": "",
+            "Points_Punch_Text": {
+                "Font_Size": 30,
+                "Color": "#eb0323",
+                "Font": "Holtwood One SC"
+            },
+            "Points_Card_Check_In_Name": {
+                "Singular": "Point",
+                "Plural": "Points"
+            },
+            "Punch_Card_Check_In_Name": {
+                "Singular": "Stamp",
+                "Plural": "Stamps"
+            },
+            "Punch_Card_Message": {
+                "Text": "UNTIL YOUR NEXT REWARD",
+                "Font_Size": 15,
+                "Color": "#000000",
+                "Font": "Open Sans"
+            },
+            "Point_Card_Message": {
+                "Text": "Earned and not yet used",
+                "Font_Size": 13,
+                "Color": "#1e73be",
+                "Font": "Raleway"
+            },
+            "Rewards_Earned_Message": {
+                "Singular": "REWARD EARNED",
+                "Plural": "REWARDS EARNED",
+                "Font_Size": 16,
+                "Color": "#1e73be",
+                "Font": "Open Sans"
+            }
+        },
+        "Rewards_List": {
+            "Background_Color": "#ffffff",
+            "Total_Points": {
+                "Font_Size": 10,
+                "Color": "#ffffff",
+                "Background_Color": "#eb0323",
+                "Font": "Open Sans",
+                "Punch_Message_Singular": "Unused Punch",
+                "Punch_Message_Plural": "Unused Punches",
+                "Point_Message_Singular": "Unused Point",
+                "Point_Message_Plural": "Unused Points"
+            },
+            "Total_Remaining_Balance": {
+                "Font_size": 15,
+                "Color": "#565656",
+                "Font": "Open Sans"
+            },
+            "Reward_Title": {
+                "Font_size": 15,
+                "Color": "#565656",
+                "Font": "Open Sans"
+            },
+            "Reward_Description": {
+                "Font_size": 15,
+                "Color": "#565656",
+                "Font": "Open Sans"
+            },
+            "Reward_Cost": {
+                "Font_size": 15,
+                "Color": "#999999",
+                "Font": "Open Sans"
+            },
+            "Line_Separator": {
+                "Color": "#e8e6e9",
+                "Thickness": 1
+            },
+            "Arrow": {
+                "Color": "#5b5e5e"
+            }
+        },
+        "Redemption_History": {
+            "Background_Color": "#ffffff",
+            "Header_Text": {
+                "Text": "Redemption History",
+                "Font_Size": 25,
+                "Color": "#ffffff",
+                "Background_Color": "#eb0323",
+                "Font": "Open Sans"
+            },
+            "Reward_Title": {
+                "Font_size": 15,
+                "Color": "#565656",
+                "Font": "Open Sans"
+            },
+            "Reward_Description": {
+                "Font_size": 12,
+                "Color": "#565656",
+                "Font": "Open Sans"
+            },
+            "Reward_Cost": {
+                "Font_size": 11,
+                "Color": "#999999",
+                "Font": "Open Sans"
+            },
+            "Redeem_Date": {
+                "Font_size": 13,
+                "Color": "#565656",
+                "Font": "Open Sans"
+            },
+            "Line_Separator": {
+                "Color": "#e8e6e9",
+                "Thickness": "1"
+            }
+        },
+        "Login_Register": {
+            "Icon_Image": "",
+            "Background_Color": "#f5f6f7",
+            "Title_Login": {
+                "Text": "LOGIN",
+                "Font_size": 24,
+                "Color": "#5b5a5a",
+                "Font": "Roboto"
+            },
+            "Title_Register": {
+                "Text": "REGISTER",
+                "Font_size": 24,
+                "Color": "#5b5a5a",
+                "Font": "Roboto"
+            },
+            "Title_Reset_Password": {
+                "Text": "FORGOT PASSWORD",
+                "Font_size": 24,
+                "Color": "#5b5a5a",
+                "Font": "Roboto"
+            },
+            "Login_Button": {
+                "Background_Color": "#eb0323"
+            },
+            "Register_Button": {
+                "Background_Color": "#eb0323"
+            },
+            "Reset_Password_Button": {
+                "Background_Color": "#eb0323"
+            },
+            "New_Account_Button": {
+                "Background_Color": "#ffffff"
+            },
+            "Back_To_Login_Button": {
+                "Background_Color": "#ffffff"
+            },
+            "New_Member_Email_Subject": {
+                "Text": "Welcome to the Rewards Program!"
+            },
+            "New_Member_Email_Message": {
+                "Text": ""
+            }
+        },
+        "Settings": {
+            "Gear_Icon": {
+                "Color": "#000000"
+            },
+            "Background_Color": "#ffffff",
+            "Redemption_History_Button": {
+                "Text": "Redemption History",
+                "Font_Size": 17,
+                "Color": "#ffffff",
+                "Background_Color": "#eb0323",
+                "Font": "Open Sans"
+            },
+            "Logout_Button": {
+                "Text": "Logout",
+                "Font_Size": 17,
+                "Color": "#fffff",
+                "Background_Color": "#eb0323",
+                "Font": "Open Sans"
+            }
+        },
+        "Messages": {
+            "CASHIER": {
+                "Text": "PLEASE HAND YOUR DEVICE TO THE CASHIER",
+                "Font_Size": 40,
+                "Color": "#26c17b",
+                "Font": "Open Sans"
+            },
+            "CHECKIN_SUCCESSFUL": {
+                "Singular": "STAMP SUCCESSFUL",
+                "Plural": "STAMPS  SUCCESSFUL",
+                "Font_Size": 40,
+                "Color": "#26c17b",
+                "Font": "Open Sans"
+            },
+            "CHECKIN_FAILED": {
+                "Text": "STAMP FAILED",
+                "Font_Size": 40,
+                "Color": "#26c17b",
+                "Font": "Open Sans"
+            },
+            "REDEEM_SUCCESSFUL": {
+                "Text": "REDEEM SUCCESSFUL",
+                "Font_Size": 40,
+                "Color": "#26c17b",
+                "Font": "Open Sans"
+            },
+            "REDEEM_FAILED": {
+                "Text": "REDEEM FAILED",
+                "Font_Size": 40,
+                "Color": "#26c17b",
+                "Font": "Open Sans"
+            }
+        },
+        "Buttons": {
+            "CHECK_IN": {
+                "Text": "STAMP ME",
+                "Font_Size": 20,
+                "Color": "#ffffff",
+                "Background_Color": "#eb0323",
+                "Font": "Open Sans"
+            },
+            "REDEEM": {
+                "Text": "REDEEM",
+                "Font_Size": 20,
+                "Color": "#ffffff",
+                "Background_Color": "#eb0323",
+                "Font": "Open Sans"
+            },
+            "REDEEM_UNSELECTABLE": {
+                "Text": "REDEEM",
+                "Font_Size": 20,
+                "Color": "#ffffff",
+                "Background_Color": "#c0c0c0",
+                "Font": "Open Sans"
+            },
+            "REDEEM_REWARDS_EARNED": {
+                "Text": "REDEEM",
+                "Font_Size": 20,
+                "Color": "#ffffff",
+                "Background_Color": "#eb0323",
+                "Font": "Open Sans"
+            },
+            "CONTINUE": {
+                "Text": "CONTINUE",
+                "Font_Size": 20,
+                "Color": "#ffffff",
+                "Background_Color": "#eb0323",
+                "Font": "Open Sans"
+            },
+            "BACK": {
+                "Text": "BACK",
+                "Font_Size": 20,
+                "Color": "#ffffff",
+                "Background_Color": "#eb0323",
+                "Font": "Open Sans"
+            },
+            "TRY_AGAIN": {
+                "Text": "TRY AGAIN",
+                "Font_Size": 20,
+                "Color": "#ffffff",
+                "Background_Color": "#eb0323",
+                "Font": "Open Sans"
+            }
+        }
+    }
+}

@@ -1,0 +1,222 @@
+page-reward-home {
+
+.rewards_program, .rewards_program_home, .rewards_program_stamp_input {
+	margin: 0 auto;
+	max-width: 590px;
+}
+
+.rp_login_logo_row {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.rp_login_logo {
+	margin: 0 auto;
+	width: 100vw;
+}
+
+.rp_step1 {
+    text-align: center;
+}
+.rp_row_top {
+    display: inline-block;
+    width: 100%;
+}
+
+.rp_row_top_left {
+    float: left;
+    width: 30%;
+}
+
+.rp_row_top_left img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.rp_row_top_right {
+    width: 70%;
+}
+
+.rp_row_top {
+    align-items: center;
+    display: flex;
+    margin-top: 0;
+	margin-left: 10px;
+}
+
+.rp_product_point {
+    line-height: normal;
+	font-weight: bold;
+}
+
+.rp_product_title {
+    line-height: normal;
+	font-weight: bold;
+}
+
+.have_earnedtext {
+	font-weight: normal;
+}
+
+.rp_row_second {
+    margin-top: 30px;
+    text-align: center;
+	display: flex;
+}
+
+.rp_button_checkin {
+	margin-left: 10px;
+	margin-right: 10%;
+	cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 20px 10px;
+	width: 45%;
+}
+
+.rp_button_redeem {
+	margin-right: 10px;
+	cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 20px 10px;
+	width: 45%;
+	
+	position: relative; 
+}
+
+
+.rp_row_third ul {
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.rp_row_third {
+    margin-top: 40px;
+}
+
+.rp_row_third ul li:first-child,.rp_row_third ul li:nth-child(6) {
+    margin-left: 0;
+}
+
+.rp_row_third ul li {
+	position: relative;
+	width: 17%;
+    margin-left: 3%;
+	margin-bottom: 15px;
+	background-color: transparent;
+	border-radius: 50%;
+	display: inline-block;
+	border: 2px 
+	solid rgb(41, 152, 210);
+}
+
+.rp_row_third ul li:after {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}
+
+.rp_row_third ul.punch_style_Square li{
+    border-radius: 0;
+}
+
+
+//////
+
+.rp_step_checkin_second {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.rp_bt_default {
+	margin-left: 10px;
+	margin-right: 10%;
+	cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 20px 10px;
+	width: 45%;
+	
+	font-size: 20px;
+	color: #ffffff;
+	background-color: #eb0323;
+	font-family: 'Open Sans';
+}
+
+.rp_bt_continue {
+	cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 20px 10px;
+	width: 45%;
+	
+	font-size: 20px;
+	color: #ffffff;
+	background-color: #eb0323;
+	font-family: 'Open Sans';
+}
+
+.header_reward {
+    color: #5e5c5f;
+    font-weight: 600;
+    padding-left: 32%;
+	display: table-cell;
+    vertical-align: top;
+    padding-left: 5px;
+}
+
+.description_reward {
+    line-height: 20px;
+    padding-bottom: 5px;
+}
+.chevron_wrapper, .date_reward {
+	display: table-cell;
+    vertical-align: middle;
+}
+
+.date_reward{
+	line-height: 1;
+
+	color: #565656;
+	font-size: 13px;
+	font-family: Open Sans
+}
+.ul_list_rewards {
+    padding: 10px;
+    margin: 0;
+	display: table;
+    border-collapse: collapse;
+    /*border: 1px solid #e8e6e9;
+    border-radius: 3px;*/
+}
+.ul_list_rewards .separator {
+	display: block;
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+.ul_list_rewards  li:nth-last-of-type(2) {
+	border-bottom: none;
+}
+
+.ul_list_rewards li {
+    list-style-type: none !important;
+    display: table-row;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.ul_list_rewards li:last-child {
+    border-bottom: none !important;
+}
+
+.image_wrapper {
+	display: table-cell;
+	width: 20%;
+	vertical-align: middle;
+}
+
+}

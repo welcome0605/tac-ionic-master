@@ -1,0 +1,170 @@
+
+
+page-color-match {
+	background:#fafafa;
+	.toolbar-background{
+		background:transparent;
+		border:none;
+		box-shadow: none !important;
+	}
+	ion-header{
+		position:relative !important;
+		box-shadow: none !important;
+		background:transparent;
+		border: none;
+		.toolbar-content{
+			position:absolute;
+			text-align: center;
+			width: 100%;
+			left: 0;
+		}
+	}
+	ion-navbar{
+		box-shadow: none;
+		background:transparent;
+		border: none;
+		.logo_view{
+			margin-top: 1.5%;
+			img{			
+				//width: 35%;
+				display: block;
+    			margin: 0 auto;
+			}
+		}
+	}
+	ion-content {		
+    	// position:relative !important;
+    	// overflow:auto !important;      	
+	}
+	.bg_view{
+		background: url(../assets/image/homebg.png) no-repeat top;
+		background-size: cover;
+		width:100%;
+		top:12%;
+		@media(max-width: 480px) {
+			top:12%;
+		}
+		@media(max-width: 360px) {
+			top:12%;
+		}
+		
+	}
+	.scroll-content{
+		overflow-y:hidden !important; 
+		margin-top:0 !important;
+	}
+	.fixed-content{
+		margin-top: 0 !important;
+	}		
+	.card_view{
+		position:absolute;
+		bottom: 15%;
+		right:0;
+		left:0;
+		@media(max-width: 480px) {
+			bottom: 10%;
+		}
+		@media(max-width: 360px) {
+			bottom: 5%;
+		}
+		ion-card.gallery_bg{
+			background:#263238;
+		}
+		ion-card.camera_bg{
+			background:#8c7459;
+		}
+		ion-card{
+			display:table;
+			// height:100%;
+			// width:100%;
+			//padding:50px;
+			@media(max-width: 560px) {
+				//padding:30px;
+			}
+			@media(max-width: 480px) {
+				//padding:20px;
+			}
+			@media(max-width: 360px) {
+				//padding:10px;
+			}
+		}
+		.card-content{
+			padding: 30px 0;
+		}
+		ion-card-content{
+			display:table-cell;			
+			vertical-align:middle;
+			
+			img{				
+				display: block;
+				margin: 0 auto;				
+				width:25%;				
+			}
+			
+			p{
+				color: #fff;
+				font-size: 25px;
+				text-transform: uppercase;
+				text-align: center;
+				padding-top: 20px;
+				font-family: 'sf_ui_displaylight';
+				@media(max-width: 480px) {
+					font-size: 20px;					
+				}
+				@media(max-width: 360px) {
+					font-size: 14px;					
+				}
+
+			}
+			
+		}
+		
+	}	
+	.toolbar-background-md, .toolbar-background-ios{
+		background:transparent !important;
+	}
+	ion-header.header.header-ios, .header-md {
+    		border-bottom: none !important;
+	}
+	@media (min-width: 992px){
+		.toolbar-md, .toolbar-ios{
+			height: 100px;
+		}
+		.toolbar-content-ios{
+			width: 100%;
+		}
+		.header-logo-cosmo{
+			height: 48px;
+		}
+	}
+
+	ion-header.header.header-ios, .header-md {
+	    border-bottom: none !important;
+	}
+
+	.header-ios .toolbar-ios:last-child .toolbar-background-ios{
+		border-width: 0px !important;
+	}
+}
+
+.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before{
+	background-image:none;
+}
+
+.ios{
+	page-color-match{
+		ion-navbar{
+			.logo_view{
+				margin-top: 17%;
+			}
+			@media (min-width: 992px){
+				.logo_view{
+					margin-top: 10%;
+				}	
+			}
+		}	
+	}	
+}
+
+
+

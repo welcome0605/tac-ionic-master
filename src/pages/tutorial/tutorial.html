@@ -1,0 +1,40 @@
+<ion-content no-bounce [style.background] = "css.pagerCss.backgroundColor" [style.height]="'100vh'">
+	<div (tap)="closePage()" style="top: 0;
+	    position: fixed;
+	    width: 100%;
+	    z-index: 9;">
+        <ion-icon name="ios-close-outline" style="font-weight: bold;
+		    z-index: 999999; padding-top: 25px;"
+			[style.color]="css.buttonCss.color"	
+			[style.font-size]="css.buttonCss.fontSize"
+			[style.position]="css.buttonCss.position"
+			[style.top]="css.buttonCss.top"	
+			[style.right]="css.buttonCss.right"
+        ></ion-icon>
+    </div>
+	<ion-slides #slides (ionSlideDidChange)="slideChanged()" pager="true">
+		<ion-slide *ngFor=" let slide of slideArray; let index = index; ">
+			<div style="
+				width: 100%;
+				height: 100%;"
+				[style.background]="slide.type == 2 ? 'black': 'transparent'"
+				[style.display]="(index == slideArray.length) ? 'table' : 'block'"
+				>
+				<div style="display: table-cell; vertical-align: middle;">
+					<img *ngIf="slide.type == 1"
+						[src]="slide.url" 
+						[style.position]="css.imgCss.imgPositionType" [style.height]="'100vh'">
+					<iframe id="video_{{index}}" *ngIf="slide.type == 2" width="100%" height="211" [src]="slide.url" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+			
+			<div
+				style="display: (index == slideArray.length) ? 'block' : 'table';
+					width: 100%;
+					height: 100%;"
+				(tap)="closePage()">
+			</div>
+		</ion-slide>
+	</ion-slides>
+	
+</ion-content>

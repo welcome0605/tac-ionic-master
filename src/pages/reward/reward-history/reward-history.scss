@@ -1,0 +1,144 @@
+page-reward-history {
+
+.rewards_program, .rewards_program_home, .rewards_program_stamp_input {
+	margin: 0 auto;
+	max-width: 590px;
+	padding: 10px;
+}
+
+.rp_button_checkin {
+	margin-left: 10px;
+	margin-right: 10%;
+	cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 20px 10px;
+	width: 45%;
+	
+	font-size: 20px;
+	color: #ffffff;
+	background-color: #eb0323;
+	font-family: 'Open Sans';
+}
+
+.rp_button_redeem {
+	margin-right: 10px;
+	cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 20px 10px;
+	width: 45%;
+	
+	position: relative; 
+	font-size: 20px;
+	color: #ffffff;
+	background-color: #eb0323;
+	font-family: 'Open Sans';
+}
+
+
+//////
+
+.rp_step_checkin_second {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.rp_step_checkin_fourth {
+	text-align: center;
+	display: inherit;
+    line-height: 1;
+    margin: 15px 0;
+}
+
+.rp_bt_continue {
+	cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 20px 10px;
+	width: 45%;
+}
+
+.rp_member_points {
+	text-align: center;
+	padding: 20px 0;
+	margin-bottom: 10px;
+
+	font-size: 20px;
+	color: #ffffff;
+	background-color: #eb0323;
+	font-family: 'Open Sans';
+}
+
+.header_reward {
+    color: #5e5c5f;
+    font-weight: 600;
+    padding-left: 10%;
+	display: table-cell;
+    vertical-align: top;
+    padding-left: 5px;
+}
+
+.description_reward {
+    line-height: 20px;
+    padding-bottom: 5px;
+}
+.date_reward {
+	display: table-cell;
+	vertical-align: middle;
+	float: right;
+}
+
+.date_reward{
+	line-height: 70px;
+	height: 70px;
+	color: #565656;
+	font-size: 13px;
+	font-family: Open Sans
+}
+.ul_list_rewards {
+    padding: 2px;
+    margin: 0;
+	display: table;
+	border-collapse: collapse;
+	width: 100%
+    /*border: 1px solid #e8e6e9;
+    border-radius: 3px;*/
+}
+
+.ul_list_rewards .reward_available {
+    cursor: pointer;
+}
+.ul_list_rewards .reward_not_available {
+    opacity: 0.4;
+}
+
+.ul_list_rewards .separator {
+	display: block;
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+.ul_list_rewards  li:nth-last-of-type(2) {
+	border-bottom: none;
+}
+
+.ul_list_rewards li {
+	padding: 8px;
+    list-style-type: none !important;
+    display: table-row;
+    width: 100%;
+    margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e2e2e2;
+}
+.ul_list_rewards li:last-child {
+    border-bottom: none !important;
+}
+
+.image_wrapper {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+}

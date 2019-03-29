@@ -1,0 +1,33 @@
+<ion-header>
+	<ion-navbar>
+		<menu-back></menu-back>
+		<ion-title>
+			<logo></logo>
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content style="background-color: #111f2a;text-align: center;" id="imageContent" no-bounce>
+	<img [src]="image"
+			usemap="#planetmap" class="cst_img"/>
+
+	<map name="planetmap" id="planetmap">
+		<area shape="poly" alt="first" *ngFor="let item of masterCoords" [attr.coords]="item[coords]" (tap)="openPage(item.value)" href="#">
+	  	<!-- <area shape="poly" coords="248,311,485,310,479,446,252,444" (click)="demo()" href="#">
+	  	<area shape="poly" coords="490,313,703,312,705,449,487,444" (click)="demo()" href="#">
+	  	<area shape="poly" coords="40,462,249,462,258,611,230,618,226,628,44,627" (click)="demo()" href="#">
+	  	<area shape="poly" coords="254,461,480,463,471,611,362,605,299,607,259,615" (click)="demo()" href="#">
+	  	<area shape="poly" coords="483,463,704,466,699,626,505,627,499,618,474,612" (click)="demo()" href="#">
+	  	<area shape="poly" coords="44,630,230,631,232,690,240,735,245,765,51,764" (click)="demo()" href="#">
+	  	<area shape="poly" coords="503,635,697,632,692,764,484,765" (click)="demo()" href="#">
+	  	<area shape="poly" coords="50,770,245,770,253,780,281,786,314,790,363,788,362,919,63,913" (click)="demo()" href="#">
+	  	<area shape="poly" coords="368,787,434,784,484,775,694,770,680,912,367,919" (click)="demo()" href="#">
+	  	<area shape="poly" coords="61,930,275,933,285,1079,76,1081" (click)="demo()" href="#">
+	  	<area shape="poly" coords="279,935,458,932,443,1081,292,1082" (click)="demo()" href="#">
+	  	<area shape="poly" coords="461,934,682,929,665,1080,449,1079" (click)="demo()" href="#">
+	  	<area shape="poly" coords="194,1234,309,1236,306,1321,195,1319" (click)="demo()" href="#">
+	  	<area shape="poly" coords="429,1235,534,1231,538,1322,433,1318" (click)="demo()" href="#">
+	  	<area shape="poly" coords="232,616,270,612,313,610,357,607,421,610,462,612,484,615,498,618,505,630,500,662,496,701,491,747,488,774,439,787,369,791,311,787,266,782,251,779" (click)="demo()" href="#"> -->
+
+	</map>
+</ion-content>

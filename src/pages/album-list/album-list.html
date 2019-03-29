@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar>
+        <menu-back></menu-back>
+        <ion-title>
+            <logo></logo>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>	    		 
+	<ion-list>
+	  	<button ion-item *ngFor="let x of data" (click)="itemSelected(x)"
+        [style.color]="css.labelCss.color"
+        [style.font-size]="css.labelCss.size"
+        [style.font-family]="css.labelCss.fontName"
+        [style.padding]="css.labelCss.paddingLeft"
+        [style.border-bottom]="css.labelCss.borderBottom"
+        >
+            {{x.title['$t']}}   
+        </button>   
+	</ion-list>
+</ion-content>
+

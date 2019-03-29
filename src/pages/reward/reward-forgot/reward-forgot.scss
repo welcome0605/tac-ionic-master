@@ -1,0 +1,106 @@
+page-forgot {
+
+.rp_login_register_logo_row {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.rp_reset_pass_title {
+	text-align: center;
+	margin: 10px 0;
+	letter-spacing: 5px; 
+}
+
+#user_email,#user_pass,#user_re_pass{
+	border-top: 0 !important;
+	padding-left: 6px;
+}
+#user_login,#user_pass,#user_re_pass,#user_name,#user_email,#first_name,#last_name,#reset_email{
+	border: 1px solid #cfd0d1;
+	padding-left: 6px;
+}
+
+.list-md .item-block .item-inner{
+	border-bottom: 0px !important;
+}
+  
+.item-md.item-block .item-inner{
+	border-bottom: 0px !important
+}
+
+.loginview_content {
+	margin-left: 10%;
+	margin-right: 10%;
+	overflow: hidden !important;
+}
+
+.login-sign-button {
+	font-size: 12px;
+	font-family: "roboto_regular";
+	width: 100%;
+	border-radius: 50px;
+	border: none;
+	color : #fff;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	height: 50px;
+}
+
+.wp-social-login-widget {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 26px;
+}
+.wp-social-login-connect-with {
+	font-size: 12px;
+	color: #5b5a5a;
+	line-height: normal;
+}
+
+.wp-social-login-widget {
+	padding-top: 6px;
+	padding-bottom: 0;
+	line-height: normal;
+}
+
+.rp_login_logo_row {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.rp_login_logo {
+	max-width: 156px;
+	max-height: 156px;
+	margin: 0 auto;
+}
+
+.rp_login_social {
+	width: 45%;
+	margin: 0 auto;
+	padding-top: 4px;
+}
+
+.rp_login_social img {
+	width: 45%;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+.wp-new-account, .wp-register-link {
+	width: 100%;
+	border: 1px solid #cfd0d1;
+	border-radius: 50px;
+	height: 50px;
+	color: #428bca;
+	padding: 0;
+	font-size: 12px;	
+}
+.wp-new-account-link, .wp-register-link{
+	width: 100%;
+	display: block;
+	border-bottom: none;
+	padding: 15px 25px;
+}
+
+}

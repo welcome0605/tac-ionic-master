@@ -1,0 +1,32 @@
+
+<ion-header>
+    <ion-navbar>
+        <menu-back></menu-back>
+        <ion-title>
+            <logo></logo>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="page-content">
+    <div class="rewards_program_message"
+        style = "min-height: calc(100% - 50px)">
+        <div class="rp_step_checkin_top">
+            <div class="rp_message_top"
+                [style.font-family] = "this.css['MessageStyle']['Font']"
+                [style.font-size] = "this.css['MessageStyle']['Font_Size']+'px'"
+                [style.color] = "this.css['MessageStyle']['Color']">{{this.css["StatusMessage"]}}</div>
+        </div>
+        <div class="rp_step_checkin_fourth">
+            <div class="rp_bt_continue"
+                (click) = "onContinue()"
+                [style.background-color] = "this.css['ButtonType']['Background_Color']"
+                [style.font-family] = "this.css['ButtonType']['Font']"
+                [style.font-size] = "this.css['ButtonType']['Font_Size']+'px'"
+                [style.color] = "this.css['ButtonType']['Color']">{{this.css["ButtonType"]["Text"]}}</div>
+        </div>
+    </div>
+
+    <setting-bar style = "display:block" (logoutClicked)="onLogout()" (historyClicked)="onHistory()"></setting-bar>
+    
+</ion-content>

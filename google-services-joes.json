@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "248369073215",
+    "firebase_url": "https://joes-italian-ice.firebaseio.com",
+    "project_id": "joes-italian-ice",
+    "storage_bucket": "joes-italian-ice.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:248369073215:android:6854fd5219bca688",
+        "android_client_info": {
+          "package_name": "com.theappcompany.jii"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "248369073215-gr2e8qder5kjrigkt6c2ju253o91fguo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC1k8g-2lPnVe8mlSf_mO52fUXDTbsbUE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:248369073215:android:2a2ce085b3a2a0d5",
+        "android_client_info": {
+          "package_name": "com.theappcompany.joeice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "248369073215-gr2e8qder5kjrigkt6c2ju253o91fguo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC1k8g-2lPnVe8mlSf_mO52fUXDTbsbUE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

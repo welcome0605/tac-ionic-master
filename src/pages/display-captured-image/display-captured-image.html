@@ -1,0 +1,94 @@
+<!-- <ion-header>
+    <ion-navbar>
+        <ion-title>Desired Shade</ion-title>
+        <ion-buttons end>
+            <button (tap)="closePage()" ion-button icon-only>
+                <ion-icon name="ios-close-outline"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header> -->
+<ion-content id="content" overflow-scroll="true" [hidden]="show"
+[style.background-color]="css.backgroundColor" no-bounce>
+    <div class="cst_title">
+        <ion-row>
+            <ion-col col-2 (tap)="closePage()" text-left style="padding-left: 15px;">
+                <ion-icon name="ios-arrow-back-outline" style="font-size: 35px;"></ion-icon>
+            </ion-col>
+            <ion-col col-8 text-center>
+                <div>Desired Shade</div>
+            </ion-col>
+            <ion-col col-2 (tap)="closePage()" text-right style="padding-right: 15px;padding-top: 0px;">
+                <ion-icon name="ios-close-outline" style="font-size: 45px;"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </div>
+    <div>
+        <div class="thumbnail">
+            <div class="preview"></div>
+            <img [src]="sanitize(imageBase64)" id="scream"/>
+            <canvas id="myCanvas" width="100" height="100" absolute-drag startLeft="0" startTop="0"></canvas>
+        </div>
+    </div>
+    <canvas id="cs" [hidden]="'true'"></canvas>
+
+    <!-- <div [style.height]="canvasHeight" [style.width]="canvasWidth" [style.background-color]="hexColor" style="position: fixed;
+    right: -2px;
+    top: 71px;
+    border: 2px white solid">
+</div> -->
+
+<br>
+
+<div class="msg_view" [hidden]="is_msg_hide" [ngClass]="(showData == true) ? 'cst_showData' : 'cst_notShowData'">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-card >
+                    <ion-card-content text-center>                            
+                        <ion-card-title>Select a color in your picture</ion-card-title>
+                        <ion-buttons end>
+                            <button (click)="closeMessage()" ion-button icon-only>
+                                <ion-icon name="ios-close-outline"></ion-icon>
+                            </button>
+                        </ion-buttons>                        
+                        <p>
+                            Enjoy this feature!<br>
+                            Achieving shade may require multiple steps
+                        </p>                           
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid> 
+</div>
+<!-- <div class="slide_view" id="slide">
+    <ion-slides slidesPerView="4" does-continue="true">
+        <ion-slide *ngFor="let item of similarProduct; let index=index; ">
+            <div class="slide_item">
+                <div class="" style="width: 90px;height: 90px;">
+                    <img src="{{imgUrl}}{{item.image}}" (click)="displayProduct(item.type,item)" style="width:90px;height: 90px;border-radius: 50%;">
+                </div>
+                <h6 
+                [style.color]="css.color"
+                style="line-height: 0px;">{{item.productCode}}</h6>                   
+            </div>      
+        </ion-slide>
+    </ion-slides>
+</div> -->
+
+<div class="slide_view" id="slide">
+    <ion-slides slidesPerView="3" does-continue="true">
+        <ion-slide *ngFor="let item of similarProduct; let index=index; ">
+            <div class="slide_item">
+                <div center style="width: 90px;height: 90px; margin: 0 auto;">
+                    <img src="{{imgUrl}}{{item.image}}" (click)="displayProduct(item.type,item)" style="width:90px;height: 90px;border-radius: 50%;">
+                </div>
+                <h6 style="font-size: 12px;" 
+                [style.color]="css.color">{{item.productCode}}</h6>                   
+            </div>      
+        </ion-slide>
+    </ion-slides>
+</div>
+
+</ion-content>
